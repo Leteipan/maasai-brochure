@@ -130,6 +130,12 @@ return (
           </select>
           <button type="submit">SUBMIT</button>
         </form>
+        <div>
+  {status === 'sending' && <p>Sending your request...</p>}
+  {status === 'success' && <p>Thank you! Your request was sent successfully.</p>}
+  {status === 'error' && <p>Oops! Something went wrong. Please try again.</p>}
+</div>
+
       </div>
       <div className={styles.locationWrapper}>
         <h2>LOCATION</h2>
