@@ -1,253 +1,204 @@
+/* styles/Home.module.css */
 
-/* General styles */
+/* Base colors, typography */
 .container {
   font-family: sans-serif;
-  color: #3B3A29;
-  background: #FFF4DC;
+  color: #3b3a29;
+  background: #fff4dc;
 }
 
-/* HERO SECTION */
+/* ---- HERO ---- */
 .hero {
   position: relative;
-  height: 400px;
   width: 100%;
+  height: 300px;
   overflow: hidden;
 }
-
 .heroImageOverlay {
   position: absolute;
   inset: 0;
   background: rgba(60, 0, 0, 0.3);
   z-index: 1;
 }
-
 .heroOverlay {
   position: absolute;
   bottom: 0;
-  z-index: 2;
   left: 50%;
   transform: translate(-50%, 50%);
   background: rgba(255, 244, 220, 0.9);
-  padding: 32px;
+  padding: 24px;
   border-radius: 12px;
   text-align: center;
-  max-width: 800px;
-  width: 90%;
+  max-width: 90%;
+  z-index: 2;
 }
-
 .heroOverlay h1 {
-  font-size: 48px;
+  font-size: 2rem;
   font-weight: 800;
   margin: 0;
 }
-
 .heroOverlay p {
   margin: 16px 0;
-  font-size: 18px;
+  font-size: 1rem;
+  line-height: 1.4;
 }
-
-/* CTA BUTTON GROUP */
 .ctaGroup {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 24px;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
 }
-
 .ctaGroup button,
 .ctaGroup a {
-  display: inline-block;
-  padding: 0 24px;
-  height: 48px;
-  line-height: 48px;
-  background: #8C4510;
+  padding: 0 16px;
+  height: 44px;
+  line-height: 44px;
+  background: #8c4510;
   color: white;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 500;
-  white-space: nowrap;
 }
 
-/* EXPERIENCES SECTION */
+/* ---- EXPERIENCES ---- */
 .experiences {
-  background: #FFE085;
-  padding: 48px 24px;
+  background: #ffe085;
+  padding: 32px 16px;
   text-align: center;
 }
-
 .experiences h2 {
-  font-size: 28px;
-  margin-bottom: 32px;
+  font-size: 1.75rem;
+  margin-bottom: 24px;
 }
-
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-  max-width: 900px;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: 800px;
   margin: 0 auto;
 }
-
-.cards div > div {
+.cards > div > div {
   display: flex;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
-
+.cards > div > div:last-child {
+  margin-bottom: 0;
+}
 .cards svg {
-  font-size: 24px;
-  margin-right: 12px;
-  color: #8C4510;
+  font-size: 1.25rem;
+  margin-right: 8px;
+  color: #8c4510;
 }
-
 .cards h3 {
   margin: 0;
   font-weight: 600;
 }
-
 .cards p {
   margin: 4px 0 0;
-  font-size: 14px;
-  color: #3B3A29;
+  font-size: 0.875rem;
 }
 
-/* ABOUT SECTION */
+/* ---- ABOUT ---- */
 .about {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  padding: 48px 24px;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 32px 16px;
   align-items: center;
   max-width: 900px;
   margin: 0 auto;
 }
-
 .about h2 {
-  font-size: 28px;
-  margin-bottom: 16px;
+  font-size: 1.75rem;
+  margin-bottom: 12px;
 }
-
 .about p {
-  color: #3B3A29;
+  font-size: 1rem;
+  line-height: 1.5;
 }
-
 .aboutImgWrapper {
   position: relative;
-  aspect-ratio: 4 / 3;
+  width: 100%;
+  aspect-ratio: 4/3;
   border-radius: 12px;
   overflow: hidden;
-  width: 100%;
 }
-
 .aboutImg {
   object-fit: cover;
 }
 
-/* GALLERY + LOCATION SECTION */
+/* ---- FOOTER SECTION (GALLERY + LOCATION) ---- */
 .footerSection {
-  background: #FFE085;
+  background: #ffe085;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  gap: 24px;
   max-width: 900px;
   margin: 0 auto;
-  gap: 24px;
-  padding: 48px 24px;
+  padding: 32px 16px;
 }
-
 .formWrapper,
 .locationWrapper {
-  background: #FFE085;
+  background: #ffe085;
   padding: 24px;
-  width: 100%;
 }
-
 .formWrapper h2,
 .locationWrapper h2 {
-  font-size: 28px;
-  margin-bottom: 24px;
+  font-size: 1.75rem;
+  margin-bottom: 16px;
 }
-
-.form {
-  display: flex;
-  flex-direction: column;
-}
-
 .form input,
 .form select {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 16px;
+  padding: 10px;
+  margin-bottom: 12px;
   border: 1px solid #ccc;
   border-radius: 6px;
 }
-
 .form button {
   width: 100%;
-  height: 48px;
+  height: 44px;
   border: none;
-  background: #8C4510;
+  background: #8c4510;
   color: white;
   font-weight: 500;
   border-radius: 6px;
 }
-
-.locationWrapper p {
-  margin: 8px 0;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.statusMessage p {
+  margin-top: 12px;
+  font-size: 0.9rem;
 }
-
+.locationWrapper p {
+  margin: 6px 0;
+  font-size: 1rem;
+}
 .socials {
   display: flex;
-  gap: 16px;
-  font-size: 24px;
+  gap: 12px;
+  font-size: 1.25rem;
   margin-top: 16px;
 }
 
-/* RESPONSIVE STYLES */
-@media (max-width: 768px) {
+/* ---- RESPONSIVE BREAKPOINTS ---- */
+@media (min-width: 640px) {
   .hero {
-    height: 300px;
+    height: 400px;
   }
-
-  .heroOverlay h1 {
-    font-size: 32px;
-  }
-
-  .heroOverlay p {
-    font-size: 16px;
-  }
-
-  .about {
-    grid-template-columns: 1fr;
-    padding: 32px 16px;
-  }
-
-  .footerSection {
-    grid-template-columns: 1fr;
-    padding: 32px 16px;
-  }
-
   .ctaGroup {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
   }
 }
-
-@media (max-width: 480px) {
-  .heroOverlay {
-    padding: 24px;
+@media (min-width: 768px) {
+  .experiences .cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
   }
-
-  .ctaGroup button,
-  .ctaGroup a {
-    width: 100%;
-    text-align: center;
+  .about {
+    grid-template-columns: 1fr 1fr;
   }
-
-  .cards {
-    grid-template-columns: 1fr;
+  .footerSection {
+    grid-template-columns: 1fr 1fr;
   }
 }
