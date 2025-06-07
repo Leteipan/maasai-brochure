@@ -73,11 +73,7 @@ export default function Home() {
               Experience authentic culture, history, and hospitality in our community-driven
               cultural village.
             </p>
-            <div className={styles.ctaGroup}>
-              <button>BOOK NOW</button>
-              <Link href="/">EXPLORE TOURS</Link>
-              <Link href="/">VIEW GALLERY</Link>
-            </div>
+ 
           </div>
         </section>
 
@@ -118,6 +114,11 @@ export default function Home() {
               </div>
             </div>
           </div>
+                     <div className={styles.ctaGroup}>
+              <button>BOOK NOW</button>
+              <Link href="/">EXPLORE TOURS</Link>
+              <Link href="/">VIEW GALLERY</Link>
+            </div>
         </section>
 
         {/* About */}
