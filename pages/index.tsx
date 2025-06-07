@@ -116,8 +116,8 @@ export default function Home() {
           </div>
                      <div className={styles.ctaGroup}>
               <button>BOOK NOW</button>
-              <Link href="/">EXPLORE TOURS</Link>
-              <Link href="/">VIEW GALLERY</Link>
+              <Link href="#contact">EXPLORE TOURS</Link>
+              <Link href="#contact">VIEW GALLERY</Link>
             </div>
         </section>
 
@@ -144,7 +144,7 @@ export default function Home() {
         <section className={styles.footerSection}>
           <div className={styles.formWrapper}>
             <h2>PHOTO GALLERY</h2>
-            <form onSubmit={handleSubmit} className={styles.form}>
+            <form onSubmit={handleSubmit} className={styles.form} id="contact">
               <input name="name" placeholder="Name" onChange={handleChange} required />
               <input
                 type="email"
