@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Global background color */
+/* Ensure body fills entire viewport with the background */
+html,
 body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
   background: #fff4dc;
 }
